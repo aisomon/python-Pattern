@@ -1,10 +1,21 @@
-n = int(input("Ener yor number: "))
+"""
+A            A
+AA          AA
+AAA        AAA
+AAAA      AAAA
+AAAAA    AAAAA
+AAAAAA  AAAAAA
+"""
 
-character = "*"
+n = int(input("Enter a number : "))
 
-mid = int((n+1)/2)
-
-for i in range(mid):
-    print(" "*i + character*(2*(mid-i)-1))
-for j in range(mid-1, 0, -1):
-    print(" "*(j-1) + character*(2*(mid-j) + 1))
+n = n +1
+for i in range(1, n):
+    flag = 0
+    for j in range(i):
+        print("A", end="")
+    for k in range(((n-i)*2)-flag):
+        print(" ", end="")
+    for l in range(i):
+        print("A", end="")
+    print()
